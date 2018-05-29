@@ -91,7 +91,7 @@ body {
 }
 
 #_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
-#_snb-github {
+#_snb-github, #_snb-resume {
   width: 0;
   overflow: hidden;
   transition: all 200ms ease-in-out;
@@ -104,9 +104,10 @@ body {
 }
 
 .card {
-  width: 100%;
+  /* width: 100%; */
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  margin: 0;
+  /* border: 1px solid teal; */
 }
 
 .card__heading {
@@ -153,7 +154,15 @@ body {
     }
 
     #_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
-    #_snb-github {
+    #_snb-github, #_snb-resume {
     text-align: right;
+    }
+
+    .card {
+      margin: 0 200px;
+    }
+
+    .intro--small {
+      text-align: center;
     }
 }

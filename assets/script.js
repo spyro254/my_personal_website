@@ -7,6 +7,7 @@ function expandNav() {
   edu = document.getElementById("_snb-education");
   lin = document.getElementById("_snb-linkedin");
   git = document.getElementById("_snb-github");
+  res = document.getElementById("_snb-resume");
   sn.classList.add("sidenav--open");
   snc.classList.add("sidenav__container--open");
   abt.classList.add("width-100");
@@ -15,6 +16,7 @@ function expandNav() {
   edu.classList.add("width-100");
   lin.classList.add("width-100");
   git.classList.add("width-100");
+  res.classList.add("width-100");
 }
 
 function shrinkNav() {
@@ -26,6 +28,7 @@ function shrinkNav() {
   edu = document.getElementById("_snb-education");
   lin = document.getElementById("_snb-linkedin");
   git = document.getElementById("_snb-github");
+  res = document.getElementById("_snb-resume");
   sn.classList.remove("sidenav--open");
   snc.classList.remove("sidenav__container--open");
   abt.classList.remove("width-100");
@@ -34,4 +37,5 @@ function shrinkNav() {
   edu.classList.remove("width-100");
   lin.classList.remove("width-100");
   git.classList.remove("width-100");
+  res.classList.remove("width-100");
 }
