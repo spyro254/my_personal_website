@@ -1,22 +1,37 @@
-function toggleNav() {
-  clicked = document.getElementById("_togglenav").parentElement;
-  po = document.getElementById("_page-overlay");
-  if (clicked.classList.contains("btm-nav--open")) {
-    clicked.classList.remove("btm-nav--open");
-    clicked.classList.add("btm-nav--closed");
-    po.classList.remove("page-overlay--show");
-    po.classList.add("page-overlay--hide");
-  }
-  else if (clicked.classList.contains("btm-nav--closed")){
-    clicked.classList.remove("btm-nav--closed");
-    clicked.classList.add("btm-nav--open");
-    po.classList.remove("page-overlay--hide");
-    po.classList.add("page-overlay--show");
-  }
-  else {
-    clicked.classList.remove("btm-nav--closed");
-    clicked.classList.add("btm-nav--open");
-    po.classList.remove("page-overlay--hide");
-    po.classList.add("page-overlay--show");
-  }
+function expandNav() {
+  sn = document.getElementById("_sidenav");
+  snc = document.getElementById("_sidenav-container");
+  abt = document.getElementById("_snb-about");
+  cod = document.getElementById("_snb-coding");
+  bra = document.getElementById("_snb-branding");
+  edu = document.getElementById("_snb-education");
+  lin = document.getElementById("_snb-linkedin");
+  git = document.getElementById("_snb-github");
+  sn.classList.add("sidenav--open");
+  snc.classList.add("sidenav__container--open");
+  abt.classList.add("width-100");
+  cod.classList.add("width-100");
+  bra.classList.add("width-100");
+  edu.classList.add("width-100");
+  lin.classList.add("width-100");
+  git.classList.add("width-100");
+}
+
+function shrinkNav() {
+  sn = document.getElementById("_sidenav");
+  snc = document.getElementById("_sidenav-container");
+  abt = document.getElementById("_snb-about");
+  cod = document.getElementById("_snb-coding");
+  bra = document.getElementById("_snb-branding");
+  edu = document.getElementById("_snb-education");
+  lin = document.getElementById("_snb-linkedin");
+  git = document.getElementById("_snb-github");
+  sn.classList.remove("sidenav--open");
+  snc.classList.remove("sidenav__container--open");
+  abt.classList.remove("width-100");
+  cod.classList.remove("width-100");
+  bra.classList.remove("width-100");
+  edu.classList.remove("width-100");
+  lin.classList.remove("width-100");
+  git.classList.remove("width-100");
 }

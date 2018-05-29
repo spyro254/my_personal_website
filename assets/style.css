@@ -1,118 +1,112 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand|Roboto+Mono');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Quicksand', sans-serif; */
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
+
 .page {
-  background-color: #dddfff;
+  background-color: #fff;
   width: 100%;
   /* min-height: 100vh; */
-  display: grid;
+  display: flex;
+  align-items: stretch;
 }
 
-.heading {
+.main-page {
   width: 100%;
-  height: 100px;
-  background-color: #fff;
-  margin: 0;
-  top: 0;
-  position: sticky;
-  transition: ease-in-out 0.4s;
+  box-sizing: border-box;
+  height: calc(100vh - 20px);
+  margin: 10px 10px 10px 0;
+
 }
 
-.heading > span {
-  font-size: 0.8em;
+.sidenav {
+  width: 60px;
+  background-color: #fff;
+  border: 1px solid black;
+  margin: 10px;
+  top: 0;
+  display: inline-block;
+  vertical-align: top;
+  transition: ease-in 0.3s;
+  z-index: 20;
+}
+
+.sidenav > span {
+  font-size: 1em;
   margin: 24px 8%;
   display: block;
   text-align: center;
-  transition: ease-out 0.3s;
-  transition-delay: 0.1s;
 }
 
-.page-overlay {
-  background-color: rgba(0,0,0,0.7);
-  display: none;
-  position: fixed;
-  z-index: 19;
+.sidenav--open {
+  width: 200px;
+}
+
+.sidenav__container {
+  margin: 0 30%;
+}
+
+.sidenav__container--open {
+  margin: 0 10%;
+}
+
+.sidenav__box {
   width: 100%;
-  height: 100%;
-  transition: ease-in-out 0.2s;
-}
-
-.page-overlay--hide {
-  display: none;
-}
-
-.page-overlay--show {
-  display: block;
-}
-
-.btm-nav {
-  width: 84%;
-  height: 320px;
-  position: fixed;
-  bottom: -280px;
-  background-color: #158799;
-  z-index: 20;
-  margin: 0 8%;
-  padding: 0;
-  transition: ease-in-out 0.2s;
-  border-radius: 4px 4px 0 0;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-}
-
-.btm-nav--closed {
-  bottom: -280px;
-  margin: 0 8%;
-}
-
-.btm-nav--open {
-  bottom: 0;
-  margin-bottom: 40px;
-}
-
-.nav-toggle {
-  width: 84%;
-  height: 40px;
-  position: fixed;
-  bottom: 0;
-  margin: 0;
-  background-color: #f59000;
-  z-index: 21;
+  margin: 20px 0;
+  font-size: 1.2em;
+  cursor: pointer;
   box-sizing: border-box;
-  border-top: 2px white solid;
+  text-align: center;
+  transition: transform linear 150ms;
+  user-select: none;
 }
 
-.nav-box {
-  background-color: red;
+.sidenav__box:hover {
+  color: darkgrey;
+  transform: scale(1.1);
 }
 
-#_nav-box--tl {
-  grid-row: 1/2;
-  grid-column: 1/2;
+.sidenav__box--open {
+  text-align: left;
 }
 
-#_nav-box--tr {
-  grid-row: 1/2;
-  grid-column: 2/3;
+.sidenav__box:first-child {
+  margin-top: 0;
 }
 
-#_nav-box--bl {
-  grid-row: 2/3;
-  grid-column: 1/2;
+.sidenav__box:last-child {
+  margin-bottom: 0;
 }
 
-#_nav-box--br {
-  grid-row: 2/3;
-  grid-column: 2/3;
+#_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
+#_snb-github {
+  width: 0;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  transition-delay: 180ms;
+  font-size: 0.8em;
 }
+
+.width-100 {
+  width: 100% !important;
+}
+
 .card {
   width: 100%;
-  min-height: 100vh;
-  background-color: lightskyblue;
-  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
 }
 
 .card__heading {
@@ -120,12 +114,46 @@ body {
   height: 32px;
 }
 
-.card__name--small {
-  font-size: 0.8em;
-  text-align: center;
+.intro {
+  text-align: left;
+  margin: 20px 0;
 }
 
-.card__name--large {
-  font-size: 4.8em;
+.intro--small {
+  font-size: 0.8em;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.intro--large {
+  font-size: 3.6em;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  }
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .sidenav {
+
+    }
+
+    .sidenav__box {
+      /* text-align: center; */
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+
+    .sidenav__box > span {
+      flex: 1;
+    }
+
+    #_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
+    #_snb-github {
+    text-align: right;
+    }
 }
