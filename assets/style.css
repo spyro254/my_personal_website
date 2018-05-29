@@ -1,7 +1,15 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
+
 .page {
   background-color: #fff;
   width: 100%;
@@ -12,12 +20,10 @@ body {
 
 .sidenav {
   width: 80px;
-  /* height: 100vh; */
   background-color: #fff;
   border: 1px solid black;
   margin: 10px;
   top: 0;
-  /* position: fixed; */
   display: inline-block;
   vertical-align: top;
   transition: ease-in-out 0.4s;
@@ -29,8 +35,6 @@ body {
   margin: 24px 8%;
   display: block;
   text-align: center;
-  transition: ease-out 0.3s;
-  transition-delay: 0.1s;
 }
 
 .sidenav__container {
@@ -46,6 +50,11 @@ body {
   margin: 20px 0;
   cursor: pointer;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.sidenav__box--open {
+  text-align: left;
 }
 
 .sidenav__box:first-child {
