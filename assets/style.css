@@ -26,12 +26,12 @@ body {
   top: 0;
   display: inline-block;
   vertical-align: top;
-  transition: ease-in-out 0.4s;
+  transition: ease-in 0.3s;
   z-index: 20;
 }
 
 .sidenav > span {
-  font-size: 0.8em;
+  font-size: 1em;
   margin: 24px 8%;
   display: block;
   text-align: center;
@@ -65,11 +65,21 @@ body {
   margin-bottom: 0;
 }
 
+#_snb-about, #_snb-coding, #_snb-branding, #_snb-education {
+  width: 0;
+  overflow: hidden;
+  transition: all 200ms linear;
+  transition-delay: 40ms;
+}
+
+.width-100 {
+  width: 100% !important;
+}
+
 .card {
   width: 100%;
   height: calc(100vh - 20px);
   box-sizing: border-box;
-  /* background-color: lightskyblue; */
   margin: 10px;
   border: 1px solid black;
 }
