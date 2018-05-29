@@ -1,4 +1,9 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand|Roboto+Mono');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Quicksand', sans-serif; */
 
 /* entypo */
 [class*="entypo-"]:before {
@@ -18,8 +23,16 @@ body {
   align-items: stretch;
 }
 
+.main-page {
+  width: 100%;
+  box-sizing: border-box;
+  height: calc(100vh - 20px);
+  margin: 10px 10px 10px 0;
+
+}
+
 .sidenav {
-  width: 80px;
+  width: 60px;
   background-color: #fff;
   border: 1px solid black;
   margin: 10px;
@@ -37,6 +50,10 @@ body {
   text-align: center;
 }
 
+.sidenav--open {
+  width: 200px;
+}
+
 .sidenav__container {
   margin: 0 30%;
 }
@@ -48,9 +65,17 @@ body {
 .sidenav__box {
   width: 100%;
   margin: 20px 0;
+  font-size: 1.2em;
   cursor: pointer;
   box-sizing: border-box;
   text-align: center;
+  transition: transform linear 150ms;
+  user-select: none;
+}
+
+.sidenav__box:hover {
+  color: darkgrey;
+  transform: scale(1.1);
 }
 
 .sidenav__box--open {
@@ -65,11 +90,13 @@ body {
   margin-bottom: 0;
 }
 
-#_snb-about, #_snb-coding, #_snb-branding, #_snb-education {
+#_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
+#_snb-github {
   width: 0;
   overflow: hidden;
-  transition: all 200ms linear;
-  transition-delay: 40ms;
+  transition: all 200ms ease-in-out;
+  transition-delay: 180ms;
+  font-size: 0.8em;
 }
 
 .width-100 {
@@ -78,10 +105,8 @@ body {
 
 .card {
   width: 100%;
-  height: calc(100vh - 20px);
   box-sizing: border-box;
-  margin: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .card__heading {
@@ -89,12 +114,46 @@ body {
   height: 32px;
 }
 
-.card__name--small {
-  font-size: 0.8em;
-  text-align: center;
+.intro {
+  text-align: left;
+  margin: 20px 0;
 }
 
-.card__name--large {
-  font-size: 4.8em;
+.intro--small {
+  font-size: 0.8em;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.intro--large {
+  font-size: 3.6em;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  }
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .sidenav {
+
+    }
+
+    .sidenav__box {
+      /* text-align: center; */
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+
+    .sidenav__box > span {
+      flex: 1;
+    }
+
+    #_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
+    #_snb-github {
+    text-align: right;
+    }
 }
