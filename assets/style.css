@@ -3,17 +3,19 @@ body {
   padding: 0;
 }
 .page {
-  background-color: #dddfff;
+  background-color: #fff;
   width: 100%;
   /* min-height: 100vh; */
   display: flex;
+  align-items: stretch;
 }
 
 .sidenav {
   width: 80px;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #fff;
-  margin: 0;
+  border: 1px solid black;
+  margin: 10px;
   top: 0;
   /* position: fixed; */
   display: inline-block;
@@ -33,7 +35,6 @@ body {
 
 .sidenav__container {
   margin: 0 30%;
-  border: 1px solid green;
 }
 
 .sidenav__container--open {
@@ -42,7 +43,6 @@ body {
 
 .sidenav__box {
   width: 100%;
-  border: 1px solid grey;
   margin: 20px 0;
   cursor: pointer;
   box-sizing: border-box;
@@ -58,11 +58,11 @@ body {
 
 .card {
   width: 100%;
-  min-height: 100vh;
-  background-color: lightskyblue;
-  margin: 0;
-  display: inline-block;
-  vertical-align: top;
+  height: calc(100vh - 20px);
+  box-sizing: border-box;
+  /* background-color: lightskyblue; */
+  margin: 10px;
+  border: 1px solid black;
 }
 
 .card__heading {
