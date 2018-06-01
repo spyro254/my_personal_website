@@ -43,11 +43,3 @@ function shrinkNav() {
 function testAlert() {
   alert('test');
 }
-
-// function menuClick() {
-//   snc = document.getElementById("_sidenav-container");
-//   if (snc.classList.contains("sidenav__container--open")) {
-//     alert("hey");
-//     // window.location.href = "http://google.com";
-//   }
-// }

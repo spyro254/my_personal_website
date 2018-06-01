@@ -39,12 +39,14 @@ body {
   /* vertical-align: top; */
   transition: ease-in 0.3s;
   z-index: 20;
-  position: sticky;
-  position: -webkit-sticky;
+  position: relative;
+  /* position: -webkit-sticky; */
   height: auto;
   align-self: flex-start;
   top: 0;
+  height: 100vh;
   font-family: 'Quicksand', sans-serif;
+  margin-left: -60px;
 }
 
 .sidenav > span {
@@ -56,6 +58,7 @@ body {
 
 .sidenav--open {
   width: 200px;
+  margin-left: 10px;
 }
 
 .sidenav__container {
@@ -64,6 +67,31 @@ body {
 
 .sidenav__container--open {
   margin: 0 10%;
+}
+
+.sidenav__toggle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-left: 1px solid white;
+  box-sizing: border-box;
+  bottom: 0;
+  right: -50px;
+}
+
+.sidenav__toggle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 80%;
+  margin: 0 10%;
+  height: 0.15em;
+  background: black;
+  box-shadow:
+    0 1em 0 0 black,
+    0 0.5em 0 0 black;
 }
 
 .sidenav__box {
@@ -157,6 +185,10 @@ body {
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
 
+    .sidenav {
+      margin: 0 10px;
+    }
+
     .sidenav__box {
       /* text-align: center; */
       display: flex;
@@ -166,6 +198,10 @@ body {
 
     .sidenav__box > span {
       flex: 1;
+    }
+
+    .sidenav__toggle {
+      display: none;
     }
 
     #_snb-about, #_snb-coding, #_snb-branding, #_snb-education, #_snb-linkedin,
